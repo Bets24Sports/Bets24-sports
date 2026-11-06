@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,58 +6,122 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bets24 Sports</title>
 <style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f1f5f9;
-  color: #172554;
+*{box-sizing:border-box}
+body{
+ margin:0;
+ font-family:Arial,sans-serif;
+ background:#101010;
+ color:white;
 }
-header {
-  background: #123c2c;
-  color: white;
-  padding: 25px;
-  text-align: center;
+header{
+ background:#080808;
+ padding:22px 15px;
+ text-align:center;
+ border-bottom:3px solid #ff7900;
 }
-main {
-  padding: 20px;
+header h1{margin:0;color:#ff7900;font-size:30px}
+header p{color:#ffd400;margin:8px 0 0}
+nav{
+ display:flex;justify-content:center;gap:20px;
+ padding:14px;background:#191919;flex-wrap:wrap;
 }
-.card {
-  background: white;
-  padding: 20px;
-  margin: 15px 0;
-  border-radius: 12px;
+nav a{color:#ffd400;text-decoration:none;font-weight:bold}
+.hero{
+ text-align:center;padding:45px 15px;
+ background:linear-gradient(135deg,#252525,#111);
 }
+.hero h2{font-size:30px;color:#ffd400}
+.hero p{color:#ddd}
+.button{
+ display:inline-block;background:#ff7900;color:#111;
+ padding:12px 22px;border-radius:7px;
+ text-decoration:none;font-weight:bold;margin-top:10px;
+}
+.container{max-width:900px;margin:auto;padding:20px}
+.section-title{color:#ff7900;border-bottom:2px solid #333;padding-bottom:10px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}
+.card{
+ background:#202020;padding:20px;border-radius:12px;
+ border:1px solid #393939;
+}
+.card h3{color:#ffd400;margin-top:0}
+.card p{color:#ddd;line-height:1.5}
+.quiz button{
+ background:#ff7900;border:0;padding:11px;
+ margin:6px 0;width:100%;border-radius:6px;
+ font-weight:bold;
+}
+#result{color:#ffd400;font-weight:bold}
+footer{text-align:center;background:#080808;padding:20px;color:#aaa;margin-top:25px}
 </style>
 </head>
 <body>
 
 <header>
-  <h1>Bets24 Sports</h1>
-  <p>Your Sports Information Center</p>
+<h1>🏆 BETS24 SPORTS</h1>
+<p>Your Sports Information Hub</p>
 </header>
 
-<main>
-  <div class="card">
-    <h2>Welcome!</h2>
-    <p>Welcome to Bets24 Sports.</p>
-    <p>Get sports news, fixtures and updates.</p>
-  </div>
+<nav>
+<a href="#home">Home</a>
+<a href="#cricket">Cricket</a>
+<a href="#football">Football</a>
+<a href="#quiz">Quiz</a>
+</nav>
 
-  <div class="card">
-    <h2>Cricket</h2>
-    <p>Latest cricket news and match updates.</p>
-  </div>
+<section class="hero" id="home">
+<h2>Welcome to Bets24 Sports</h2>
+<p>Cricket, Football, Results and Sports Quizzes — All in One Place!</p>
+<a class="button" href="#cricket">Explore Sports</a>
+</section>
 
-  <div class="card">
-    <h2>Football</h2>
-    <p>Football news and fixtures.</p>
-  </div>
+<div class="container">
+<h2 class="section-title">🏏 Cricket</h2>
+<div class="cards" id="cricket">
+<div class="card">
+<h3>Cricket Updates</h3>
+<p>Get cricket news, match information and tournament updates.</p>
+</div>
+<div class="card">
+<h3>Match Results</h3>
+<p>Match results and scores will be added here.</p>
+</div>
+</div>
 
-  <div class="card">
-    <h2>Sports Quiz</h2>
-    <p>Test your sports knowledge!</p>
-  </div>
-</main>
+<h2 class="section-title" id="football">⚽ Football</h2>
+<div class="cards">
+<div class="card">
+<h3>Football News</h3>
+<p>Explore football news, teams and tournament updates.</p>
+</div>
+<div class="card">
+<h3>Fixtures</h3>
+<p>Upcoming match schedules will be added here.</p>
+</div>
+</div>
 
+<h2 class="section-title" id="quiz">🧠 Sports Quiz</h2>
+<div class="card quiz">
+<h3>Which country won the 2022 FIFA World Cup?</h3>
+<button onclick="answer(false)">Brazil</button>
+<button onclick="answer(true)">Argentina</button>
+<button onclick="answer(false)">France</button>
+<p id="result">Choose your answer!</p>
+<p>Educational points only — no cash value or prizes.</p>
+</div>
+</div>
+
+<footer>
+<p>© 2026 Bets24 Sports | Sports Information & Education</p>
+</footer>
+
+<script>
+function answer(correct){
+document.getElementById("result").textContent =
+correct ? "Correct! Well done! +10 learning points." :
+"Not quite! Try again.";
+}
+</script>
 </body>
 </html>
+
