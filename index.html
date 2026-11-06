@@ -45,13 +45,22 @@ footer{text-align:center;padding:22px;color:#999}
 <a href="#dog">Dog Racing</a>
 </nav>
 
-<main>
 <section id="cricket">
-<h2>🏏 Cricket Live</h2>
+<h2>🏏 Cricket Live Scoreboard</h2>
+
 <div class="match">
-<strong>Cricket Match Updates</strong>
-<p class="status">Live Cricket Scoreboard</p>
-<p class="note">ball-by-ball updates,live score and match commentary.</p>
+<h3>Live Match</h3>
+<p id="match-status">Waiting for live match</p>
+
+<p><strong>Team A:</strong> <span id="score-a">0/0</span></p>
+<p><strong>Overs:</strong> <span id="overs">0.0</span></p>
+
+<p><strong>Team B:</strong> <span id="score-b">Yet to bat</span></p>
+
+<h3>Ball-by-ball Updates</h3>
+<ol id="ball-updates">
+<li>Match updates will appear here.</li>
+</ol>
 </div>
 </section>
 
